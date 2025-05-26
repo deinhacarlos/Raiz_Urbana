@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Configurações da Loja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 800px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .section-title {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #444;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Configurações da Loja</h1>
+
+  <form>
+
+    <!-- Informações da loja -->
+    <div class="section-title">Informações da Loja</div>
+
+    <label for="nomeLoja">Nome da Loja</label>
+    <input type="text" id="nomeLoja" name="nomeLoja">
+
+    <label for="emailContato">E-mail de Contato</label>
+    <input type="email" id="emailContato" name="emailContato">
+
+    <label for="telefoneContato">Telefone</label>
+    <input type="tel" id="telefoneContato" name="telefoneContato">
+
+    <label for="enderecoLoja">Endereço</label>
+    <input type="text" id="enderecoLoja" name="enderecoLoja">
+
+    <label for="logoLoja">Logo da Loja</label>
+    <input type="file" id="logoLoja" name="logoLoja">
+
+    <!-- Preferências do sistema -->
+    <div class="section-title">Preferências do Sistema</div>
+
+    <label for="idioma">Idioma</label>
+    <select id="idioma" name="idioma">
+      <option value="pt">Português</option>
+      <option value="en">Inglês</option>
+    </select>
+
+    <label for="moeda">Moeda</label>
+    <select id="moeda" name="moeda">
+      <option value="BRL">R$ - Real</option>
+      <option value="USD">$ - Dólar</option>
+    </select>
+
+    <label for="formatoData">Formato de Data</label>
+    <select id="formatoData" name="formatoData">
+      <option value="dd/mm/yyyy">DD/MM/AAAA</option>
+      <option value="yyyy-mm-dd">AAAA-MM-DD</option>
+    </select>
+
+    <!-- Controle de estoque -->
+    <div class="section-title">Controle de Estoque</div>
+
+    <label for="estoqueMinimo">Avisar quando estoque for menor que:</label>
+    <input type="number" id="estoqueMinimo" name="estoqueMinimo">
+
+    <label for="vendaEsgotado">Permitir venda de produtos esgotados?</label>
+    <select id="vendaEsgotado" name="vendaEsgotado">
+      <option value="nao">Não</option>
+      <option value="sim">Sim</option>
+    </select>
+
+    <!-- Meios de pagamento -->
+    <div class="section-title">Meios de Pagamento</div>
+
+    <label for="cartaoCredito">Aceitar Cartão de Crédito?</label>
+    <select id="cartaoCredito" name="cartaoCredito">
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+
+    <label for="pix">Aceitar Pix?</label>
+    <select id="pix" name="pix">
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+
+    <label for="chavePix">Chave Pix (CPF, e-mail ou chave aleatória)</label>
+    <input type="text" id="chavePix" name="chavePix">
+
+    <label for="paypalEmail">Conta PayPal (e-mail)</label>
+    <input type="email" id="paypalEmail" name="paypalEmail">
+
+    <label for="pagseguroToken">Token PagSeguro</label>
+    <input type="text" id="pagseguroToken" name="pagseguroToken">
+
+    <label for="parcelamento">Permitir Parcelamento?</label>
+    <select id="parcelamento" name="parcelamento">
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+
+    <label for="maxParcelas">Número Máximo de Parcelas</label>
+    <input type="number" id="maxParcelas" name="maxParcelas" value="3" min="1">
+
+    <label for="juros">Aplicar juros a partir de qual parcela?</label>
+    <input type="number" id="juros" name="juros" value="3" min="1">
+
+    <!-- Botão de salvar -->
+    <button type="submit">Salvar Configurações</button>
+  </form>
+
+</body>
+</html>
